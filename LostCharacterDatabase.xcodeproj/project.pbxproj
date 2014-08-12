@@ -27,6 +27,7 @@
 		2C13B82B199A951600A99CDE /* LostCharacterDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B82A199A951600A99CDE /* LostCharacterDatabaseTests.m */; };
 		2C13B835199A95FA00A99CDE /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B834199A95FA00A99CDE /* lost.plist */; };
 		2C13B838199A96D400A99CDE /* LostCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B837199A96D400A99CDE /* LostCharacter.m */; };
+		2C13B83B199AAB0500A99CDE /* AddCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		2C13B834199A95FA00A99CDE /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = lost.plist; path = ../lost.plist; sourceTree = "<group>"; };
 		2C13B836199A96D400A99CDE /* LostCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacter.h; sourceTree = "<group>"; };
 		2C13B837199A96D400A99CDE /* LostCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacter.m; sourceTree = "<group>"; };
+		2C13B839199AAB0500A99CDE /* AddCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCharacterViewController.h; sourceTree = "<group>"; };
+		2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCharacterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,19 +131,16 @@
 		2C13B7FE199A951600A99CDE /* LostCharacterDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				2C13B83C199AAB1A00A99CDE /* ViewControllers */,
+				2C13B80A199A951600A99CDE /* Main.storyboard */,
 				2C13B834199A95FA00A99CDE /* lost.plist */,
+				2C13B836199A96D400A99CDE /* LostCharacter.h */,
+				2C13B837199A96D400A99CDE /* LostCharacter.m */,
 				2C13B807199A951600A99CDE /* AppDelegate.h */,
 				2C13B808199A951600A99CDE /* AppDelegate.m */,
-				2C13B80A199A951600A99CDE /* Main.storyboard */,
-				2C13B810199A951600A99CDE /* MasterViewController.h */,
-				2C13B811199A951600A99CDE /* MasterViewController.m */,
-				2C13B813199A951600A99CDE /* DetailViewController.h */,
-				2C13B814199A951600A99CDE /* DetailViewController.m */,
 				2C13B816199A951600A99CDE /* Images.xcassets */,
 				2C13B80D199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld */,
 				2C13B7FF199A951600A99CDE /* Supporting Files */,
-				2C13B836199A96D400A99CDE /* LostCharacter.h */,
-				2C13B837199A96D400A99CDE /* LostCharacter.m */,
 			);
 			path = LostCharacterDatabase;
 			sourceTree = "<group>";
@@ -172,6 +172,19 @@
 				2C13B827199A951600A99CDE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C13B83C199AAB1A00A99CDE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C13B810199A951600A99CDE /* MasterViewController.h */,
+				2C13B811199A951600A99CDE /* MasterViewController.m */,
+				2C13B813199A951600A99CDE /* DetailViewController.h */,
+				2C13B814199A951600A99CDE /* DetailViewController.m */,
+				2C13B839199AAB0500A99CDE /* AddCharacterViewController.h */,
+				2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +291,7 @@
 				2C13B809199A951600A99CDE /* AppDelegate.m in Sources */,
 				2C13B80F199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld in Sources */,
 				2C13B805199A951600A99CDE /* main.m in Sources */,
+				2C13B83B199AAB0500A99CDE /* AddCharacterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +496,7 @@
 				2C13B830199A951600A99CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C13B831199A951600A99CDE /* Build configuration list for PBXNativeTarget "LostCharacterDatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +505,7 @@
 				2C13B833199A951600A99CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

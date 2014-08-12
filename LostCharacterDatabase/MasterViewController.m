@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "AddCharacterViewController.h"
 #import "LostCharacter.h"
 
 #define lostCharacterEntityName @"LostCharacter"
@@ -45,7 +46,40 @@
 	return cell;
 }
 
+#pragma mark - Segues
+
+- (IBAction)unwindFromAddCharacterViewController:(UIStoryboardSegue *)segue
+{
+	AddCharacterViewController *addCharacterViewController = (AddCharacterViewController *)segue.sourceViewController;
+
+	NSString *passengerToAdd = [addCharacterViewController passengerToAdd];
+	NSString *actorToAdd = [addCharacterViewController actorToAdd];
+
+	[self insertNewCharacterWithPassenger:passengerToAdd actor:actorToAdd];
+	[self saveManagedObject];
+}
+
 #pragma mark - Helper methods
+
+- (void)insertNewCharacterWithPassenger:(NSString *)passenger actor:(NSString *)actor
+{
+	LostCharacter *character = [NSEntityDescription insertNewObjectForEntityForName:lostCharacterEntityName inManagedObjectContext:self.managedObjectContext];
+	character.passenger = passenger;
+	character.actor = actor;
+}
+
+- (void)saveManagedObject
+{
+	NSError *saveError;
+	[self.managedObjectContext save:&saveError];
+
+	if (saveError) {
+		[self showAlertViewWithTitle:@"Save error" message:saveError.localizedDescription buttonText:@"OK"];
+	} else {
+		// finally loaded, fetch again the results
+		[self loadCharactersFromDB];
+	}
+}
 
 - (void)loadCharactersFromPlist
 {
@@ -56,20 +90,10 @@
 
 	// for each dictionary on the plist, create an entity on db
 	for (NSDictionary *characterDictionary in plist) {
-		LostCharacter *character = [NSEntityDescription insertNewObjectForEntityForName:lostCharacterEntityName inManagedObjectContext:self.managedObjectContext];
-		character.actor = characterDictionary[@"actor"];
-		character.passenger = characterDictionary[@"passenger"];
+		[self insertNewCharacterWithPassenger:characterDictionary[@"passenger"] actor:characterDictionary[@"actor"]];
 	}
 
-	NSError *saveError;
-	[self.managedObjectContext save:&saveError];
-
-	if (saveError) {
-		[self showAlertViewWithTitle:@"Save error" message:saveError.localizedDescription buttonText:@"OK"];
-	} else {
-		// finally loaded, fetch again the results
-		[self loadCharactersFromDB];
-	}
+	[self saveManagedObject];
 }
 
 - (void)loadCharactersFromDB

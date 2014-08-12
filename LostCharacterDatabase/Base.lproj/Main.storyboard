@@ -64,12 +64,80 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HFg-2Y-fsW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HFg-2Y-fsW">
+                            <connections>
+                                <segue destination="h3V-jg-vCx" kind="push" id="aF5-H7-YF8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
+        </scene>
+        <!--Add Character View Controller - Add character-->
+        <scene sceneID="9Ye-rc-9bv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6j-Xi-ng2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2ML-3z-Iho" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController id="h3V-jg-vCx" customClass="AddCharacterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mCx-dy-WPm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ush-O2-Qom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f4n-dQ-V5S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passenger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQJ-xp-95J">
+                                <rect key="frame" x="20" y="83" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Db-kS-njK">
+                                <rect key="frame" x="20" y="150" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="80E-Ty-7Vq">
+                                <rect key="frame" x="20" y="112" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="onTextFieldEndOnExit:" destination="h3V-jg-vCx" eventType="editingDidEndOnExit" id="Qii-mV-qXj"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-kG-Luf">
+                                <rect key="frame" x="20" y="179" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="onTextFieldEndOnExit:" destination="h3V-jg-vCx" eventType="editingDidEndOnExit" id="wzx-fx-tdG"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add character" id="7BF-oW-Fb1">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="U60-Nd-04i">
+                            <connections>
+                                <segue destination="2ML-3z-Iho" kind="unwind" identifier="unwindFromAddCharacterViewControllerSegue" unwindAction="unwindFromAddCharacterViewController:" id="E2h-1W-jCp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actorTextField" destination="Tdh-kG-Luf" id="5pZ-kB-AVL"/>
+                        <outlet property="passengerTextField" destination="80E-Ty-7Vq" id="5aE-NV-gQq"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="989" y="-638"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -105,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="989" y="64"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
