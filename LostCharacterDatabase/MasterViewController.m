@@ -39,7 +39,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
 	LostCharacter *character = self.lostCharacters[indexPath.row];
-	cell.textLabel.text = [NSString stringWithFormat:@"Passenger: %@", character.passenger];
+	cell.textLabel.text = character.passenger;
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"Actor: %@", character.actor];
 
 	return cell;
@@ -74,7 +74,10 @@
 
 - (void)loadCharactersFromDB
 {
+	// sort by passenger
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"passenger" ascending:YES];
 	NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:lostCharacterEntityName];
+	request.sortDescriptors = @[sortDescriptor];
 
 	NSError *fetchError;
 	self.lostCharacters = [self.managedObjectContext executeFetchRequest:request error:&fetchError];
