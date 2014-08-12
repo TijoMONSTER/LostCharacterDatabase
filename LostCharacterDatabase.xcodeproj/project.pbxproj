@@ -25,6 +25,8 @@
 		2C13B821199A951600A99CDE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C13B7FC199A951600A99CDE /* CoreData.framework */; };
 		2C13B829199A951600A99CDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B827199A951600A99CDE /* InfoPlist.strings */; };
 		2C13B82B199A951600A99CDE /* LostCharacterDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B82A199A951600A99CDE /* LostCharacterDatabaseTests.m */; };
+		2C13B835199A95FA00A99CDE /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B834199A95FA00A99CDE /* lost.plist */; };
+		2C13B838199A96D400A99CDE /* LostCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B837199A96D400A99CDE /* LostCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		2C13B826199A951600A99CDE /* LostCharacterDatabaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostCharacterDatabaseTests-Info.plist"; sourceTree = "<group>"; };
 		2C13B828199A951600A99CDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C13B82A199A951600A99CDE /* LostCharacterDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharacterDatabaseTests.m; sourceTree = "<group>"; };
+		2C13B834199A95FA00A99CDE /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
+		2C13B836199A96D400A99CDE /* LostCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacter.h; sourceTree = "<group>"; };
+		2C13B837199A96D400A99CDE /* LostCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,7 @@
 		2C13B7EA199A951600A99CDE = {
 			isa = PBXGroup;
 			children = (
+				2C13B834199A95FA00A99CDE /* lost.plist */,
 				2C13B7FE199A951600A99CDE /* LostCharacterDatabase */,
 				2C13B824199A951600A99CDE /* LostCharacterDatabaseTests */,
 				2C13B7F5199A951600A99CDE /* Frameworks */,
@@ -133,6 +139,8 @@
 				2C13B816199A951600A99CDE /* Images.xcassets */,
 				2C13B80D199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld */,
 				2C13B7FF199A951600A99CDE /* Supporting Files */,
+				2C13B836199A96D400A99CDE /* LostCharacter.h */,
+				2C13B837199A96D400A99CDE /* LostCharacter.m */,
 			);
 			path = LostCharacterDatabase;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 			files = (
 				2C13B817199A951600A99CDE /* Images.xcassets in Resources */,
 				2C13B803199A951600A99CDE /* InfoPlist.strings in Resources */,
+				2C13B835199A95FA00A99CDE /* lost.plist in Resources */,
 				2C13B80C199A951600A99CDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C13B815199A951600A99CDE /* DetailViewController.m in Sources */,
+				2C13B838199A96D400A99CDE /* LostCharacter.m in Sources */,
 				2C13B812199A951600A99CDE /* MasterViewController.m in Sources */,
 				2C13B809199A951600A99CDE /* AppDelegate.m in Sources */,
 				2C13B80F199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld in Sources */,
