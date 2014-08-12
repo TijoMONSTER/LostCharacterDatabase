@@ -63,7 +63,7 @@
 		2C13B826199A951600A99CDE /* LostCharacterDatabaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostCharacterDatabaseTests-Info.plist"; sourceTree = "<group>"; };
 		2C13B828199A951600A99CDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C13B82A199A951600A99CDE /* LostCharacterDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharacterDatabaseTests.m; sourceTree = "<group>"; };
-		2C13B834199A95FA00A99CDE /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
+		2C13B834199A95FA00A99CDE /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = lost.plist; path = ../lost.plist; sourceTree = "<group>"; };
 		2C13B836199A96D400A99CDE /* LostCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacter.h; sourceTree = "<group>"; };
 		2C13B837199A96D400A99CDE /* LostCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +97,6 @@
 		2C13B7EA199A951600A99CDE = {
 			isa = PBXGroup;
 			children = (
-				2C13B834199A95FA00A99CDE /* lost.plist */,
 				2C13B7FE199A951600A99CDE /* LostCharacterDatabase */,
 				2C13B824199A951600A99CDE /* LostCharacterDatabaseTests */,
 				2C13B7F5199A951600A99CDE /* Frameworks */,
@@ -129,6 +128,7 @@
 		2C13B7FE199A951600A99CDE /* LostCharacterDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				2C13B834199A95FA00A99CDE /* lost.plist */,
 				2C13B807199A951600A99CDE /* AppDelegate.h */,
 				2C13B808199A951600A99CDE /* AppDelegate.m */,
 				2C13B80A199A951600A99CDE /* Main.storyboard */,
