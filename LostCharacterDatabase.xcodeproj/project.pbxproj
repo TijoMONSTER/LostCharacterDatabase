@@ -26,8 +26,9 @@
 		2C13B829199A951600A99CDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B827199A951600A99CDE /* InfoPlist.strings */; };
 		2C13B82B199A951600A99CDE /* LostCharacterDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B82A199A951600A99CDE /* LostCharacterDatabaseTests.m */; };
 		2C13B835199A95FA00A99CDE /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B834199A95FA00A99CDE /* lost.plist */; };
-		2C13B838199A96D400A99CDE /* LostCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B837199A96D400A99CDE /* LostCharacter.m */; };
 		2C13B83B199AAB0500A99CDE /* AddCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */; };
+		2C13B83F199AB5D500A99CDE /* LostCharacterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B83E199AB5D500A99CDE /* LostCharacterTableViewCell.m */; };
+		2C13B842199AB7E600A99CDE /* LostCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B841199AB7E600A99CDE /* LostCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +66,12 @@
 		2C13B828199A951600A99CDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C13B82A199A951600A99CDE /* LostCharacterDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharacterDatabaseTests.m; sourceTree = "<group>"; };
 		2C13B834199A95FA00A99CDE /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = lost.plist; path = ../lost.plist; sourceTree = "<group>"; };
-		2C13B836199A96D400A99CDE /* LostCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacter.h; sourceTree = "<group>"; };
-		2C13B837199A96D400A99CDE /* LostCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacter.m; sourceTree = "<group>"; };
 		2C13B839199AAB0500A99CDE /* AddCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCharacterViewController.h; sourceTree = "<group>"; };
 		2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCharacterViewController.m; sourceTree = "<group>"; };
+		2C13B83D199AB5D500A99CDE /* LostCharacterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacterTableViewCell.h; sourceTree = "<group>"; };
+		2C13B83E199AB5D500A99CDE /* LostCharacterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacterTableViewCell.m; sourceTree = "<group>"; };
+		2C13B840199AB7E600A99CDE /* LostCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacter.h; sourceTree = "<group>"; };
+		2C13B841199AB7E600A99CDE /* LostCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +137,10 @@
 				2C13B83C199AAB1A00A99CDE /* ViewControllers */,
 				2C13B80A199A951600A99CDE /* Main.storyboard */,
 				2C13B834199A95FA00A99CDE /* lost.plist */,
-				2C13B836199A96D400A99CDE /* LostCharacter.h */,
-				2C13B837199A96D400A99CDE /* LostCharacter.m */,
+				2C13B83D199AB5D500A99CDE /* LostCharacterTableViewCell.h */,
+				2C13B83E199AB5D500A99CDE /* LostCharacterTableViewCell.m */,
+				2C13B840199AB7E600A99CDE /* LostCharacter.h */,
+				2C13B841199AB7E600A99CDE /* LostCharacter.m */,
 				2C13B807199A951600A99CDE /* AppDelegate.h */,
 				2C13B808199A951600A99CDE /* AppDelegate.m */,
 				2C13B816199A951600A99CDE /* Images.xcassets */,
@@ -286,7 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C13B815199A951600A99CDE /* DetailViewController.m in Sources */,
-				2C13B838199A96D400A99CDE /* LostCharacter.m in Sources */,
+				2C13B842199AB7E600A99CDE /* LostCharacter.m in Sources */,
+				2C13B83F199AB5D500A99CDE /* LostCharacterTableViewCell.m in Sources */,
 				2C13B812199A951600A99CDE /* MasterViewController.m in Sources */,
 				2C13B809199A951600A99CDE /* AppDelegate.m in Sources */,
 				2C13B80F199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld in Sources */,

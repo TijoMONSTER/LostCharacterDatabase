@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "AddCharacterViewController.h"
 #import "LostCharacter.h"
+#import "LostCharacterTableViewCell.h"
 
 #define lostCharacterEntityName @"LostCharacter"
 #define lostCharactersPlistName @"lost"
@@ -37,11 +38,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-
 	LostCharacter *character = self.lostCharacters[indexPath.row];
-	cell.textLabel.text = character.passenger;
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Actor: %@", character.actor];
+	LostCharacterTableViewCell *cell = (LostCharacterTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+
+	[cell setActor:character.actor
+		 passenger:character.passenger
+		 hairColor:character.hair_color
+		 planeSeat:character.plane_seat
+			   age:character.age];
 
 	return cell;
 }

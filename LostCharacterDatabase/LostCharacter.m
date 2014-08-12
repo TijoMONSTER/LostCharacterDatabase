@@ -13,5 +13,8 @@
 
 @dynamic actor;
 @dynamic passenger;
+@dynamic hair_color;
+@dynamic plane_seat;
+@dynamic age;
 
 @end

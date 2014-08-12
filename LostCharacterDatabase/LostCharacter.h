@@ -14,5 +14,8 @@
 
 @property (nonatomic, retain) NSString * actor;
 @property (nonatomic, retain) NSString * passenger;
+@property (nonatomic, retain) NSString * hair_color;
+@property (nonatomic, retain) NSNumber * plane_seat;
+@property (nonatomic, retain) NSNumber * age;
 
 @end

@@ -8,10 +8,13 @@
     </entity>
     <entity name="LostCharacter" representedClassName="LostCharacter" syncable="YES">
         <attribute name="actor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="hair_color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="passenger" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plane_seat" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="LostCharacter" positionX="270" positionY="207" width="128" height="75"/>
+        <element name="LostCharacter" positionX="270" positionY="207" width="128" height="120"/>
     </elements>
 </model>
