@@ -29,6 +29,10 @@
 		2C13B83B199AAB0500A99CDE /* AddCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */; };
 		2C13B83F199AB5D500A99CDE /* LostCharacterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B83E199AB5D500A99CDE /* LostCharacterTableViewCell.m */; };
 		2C13B842199AB7E600A99CDE /* LostCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B841199AB7E600A99CDE /* LostCharacter.m */; };
+		2C13B84C199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B845199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.m */; };
+		2C13B84D199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B847199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.m */; };
+		2C13B84E199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B849199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.m */; };
+		2C13B84F199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B84B199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,14 @@
 		2C13B83E199AB5D500A99CDE /* LostCharacterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacterTableViewCell.m; sourceTree = "<group>"; };
 		2C13B840199AB7E600A99CDE /* LostCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostCharacter.h; sourceTree = "<group>"; };
 		2C13B841199AB7E600A99CDE /* LostCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostCharacter.m; sourceTree = "<group>"; };
+		2C13B844199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		2C13B845199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		2C13B846199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		2C13B847199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		2C13B848199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		2C13B849199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		2C13B84A199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		2C13B84B199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +165,7 @@
 		2C13B7FF199A951600A99CDE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C13B843199ADE1F00A99CDE /* TPKeyboardAvoiding */,
 				2C13B800199A951600A99CDE /* LostCharacterDatabase-Info.plist */,
 				2C13B801199A951600A99CDE /* InfoPlist.strings */,
 				2C13B804199A951600A99CDE /* main.m */,
@@ -190,6 +203,21 @@
 				2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C13B843199ADE1F00A99CDE /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				2C13B844199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.h */,
+				2C13B845199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.m */,
+				2C13B846199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.h */,
+				2C13B847199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.m */,
+				2C13B848199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.h */,
+				2C13B849199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.m */,
+				2C13B84A199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				2C13B84B199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,11 +319,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C13B815199A951600A99CDE /* DetailViewController.m in Sources */,
+				2C13B84F199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				2C13B84D199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.m in Sources */,
+				2C13B84C199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				2C13B842199AB7E600A99CDE /* LostCharacter.m in Sources */,
 				2C13B83F199AB5D500A99CDE /* LostCharacterTableViewCell.m in Sources */,
 				2C13B812199A951600A99CDE /* MasterViewController.m in Sources */,
 				2C13B809199A951600A99CDE /* AppDelegate.m in Sources */,
 				2C13B80F199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld in Sources */,
+				2C13B84E199ADE1F00A99CDE /* TPKeyboardAvoidingTableView.m in Sources */,
 				2C13B805199A951600A99CDE /* main.m in Sources */,
 				2C13B83B199AAB0500A99CDE /* AddCharacterViewController.m in Sources */,
 			);

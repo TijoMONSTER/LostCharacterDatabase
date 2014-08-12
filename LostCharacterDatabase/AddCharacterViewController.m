@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *passengerTextField;
 @property (weak, nonatomic) IBOutlet UITextField *actorTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hairColorTextField;
+@property (weak, nonatomic) IBOutlet UITextField *planeSeatTextField;
+@property (weak, nonatomic) IBOutlet UITextField *ageTextField;
 
 @end
 
@@ -56,7 +59,12 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
 	if ([identifier isEqualToString:@"unwindFromAddCharacterViewControllerSegue"]) {
-		if (self.passengerTextField.text.length > 0 || self.actorTextField.text.length > 0) {
+
+		if (self.passengerTextField.text.length > 0 &&
+			self.actorTextField.text.length > 0 &&
+			self.hairColorTextField.text.length > 0 &&
+			self.planeSeatTextField.text.length > 0 && [self.planeSeatTextField.text intValue] > 0 &&
+			self.ageTextField.text.length > 0 && [self.ageTextField.text intValue] > 0) {
 			return YES;
 		} else {
 			UIAlertView *alertView = [UIAlertView new];
