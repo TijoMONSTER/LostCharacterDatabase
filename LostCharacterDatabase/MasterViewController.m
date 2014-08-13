@@ -18,6 +18,7 @@
 @interface MasterViewController ()
 
 @property NSArray *lostCharacters;
+@property BOOL showSeatsLowerThan25;
 
 @end
 
@@ -64,6 +65,14 @@
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	return @"SMOKE MONSTER";
+}
+
+#pragma mark - IBActions
+
+- (IBAction)onToggleButtonPressed:(UIBarButtonItem *)sender
+{
+	self.showSeatsLowerThan25 = !self.showSeatsLowerThan25;
+	[self loadCharactersFromDB];
 }
 
 #pragma mark - Segues
@@ -120,8 +129,8 @@
 		[self insertNewCharacterWithPassenger:characterDictionary[@"passenger"]
 										actor:characterDictionary[@"actor"]
 									hairColor:@"I don't know"
-									planeSeat:@1
-										  age:@25];
+									planeSeat:[NSNumber numberWithInt: arc4random() % 50]
+										  age:[NSNumber numberWithInt:arc4random() % 50]];
 	}
 
 	[self saveManagedObject];
@@ -133,6 +142,9 @@
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"passenger" ascending:YES];
 	NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:lostCharacterEntityName];
 	request.sortDescriptors = @[sortDescriptor];
+
+	// toggle seats lower or greater than 25
+	request.predicate = [NSPredicate predicateWithFormat:(self.showSeatsLowerThan25) ? @"plane_seat < 25" : @"plane_seat >= 25"];
 
 	NSError *fetchError;
 	self.lostCharacters = [self.managedObjectContext executeFetchRequest:request error:&fetchError];
