@@ -50,6 +50,23 @@
 	return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		LostCharacter *character = self.lostCharacters[indexPath.row];
+		[self.managedObjectContext deleteObject:character];
+		[self saveManagedObject];
+//		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+	}
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return @"SMOKE MONSTER";
+}
+
 #pragma mark - Segues
 
 - (IBAction)unwindFromAddCharacterViewController:(UIStoryboardSegue *)segue
@@ -76,6 +93,7 @@
 	character.hair_color = hairColor;
 	character.plane_seat = planeSeat;
 	character.age = age;
+
 }
 
 - (void)saveManagedObject
