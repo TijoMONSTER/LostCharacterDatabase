@@ -58,7 +58,6 @@
 		LostCharacter *character = self.lostCharacters[indexPath.row];
 		[self.managedObjectContext deleteObject:character];
 		[self saveManagedObject];
-//		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
 	}
 }
 
