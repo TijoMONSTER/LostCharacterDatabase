@@ -17,7 +17,6 @@
 		2C13B80C199A951600A99CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B80A199A951600A99CDE /* Main.storyboard */; };
 		2C13B80F199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B80D199A951600A99CDE /* LostCharacterDatabase.xcdatamodeld */; };
 		2C13B812199A951600A99CDE /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B811199A951600A99CDE /* MasterViewController.m */; };
-		2C13B815199A951600A99CDE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C13B814199A951600A99CDE /* DetailViewController.m */; };
 		2C13B817199A951600A99CDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C13B816199A951600A99CDE /* Images.xcassets */; };
 		2C13B81E199A951600A99CDE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C13B81D199A951600A99CDE /* XCTest.framework */; };
 		2C13B81F199A951600A99CDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C13B7F6199A951600A99CDE /* Foundation.framework */; };
@@ -61,8 +60,6 @@
 		2C13B80E199A951600A99CDE /* LostCharacterDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LostCharacterDatabase.xcdatamodel; sourceTree = "<group>"; };
 		2C13B810199A951600A99CDE /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		2C13B811199A951600A99CDE /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		2C13B813199A951600A99CDE /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		2C13B814199A951600A99CDE /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		2C13B816199A951600A99CDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C13B81C199A951600A99CDE /* LostCharacterDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostCharacterDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C13B81D199A951600A99CDE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -197,8 +194,6 @@
 			children = (
 				2C13B810199A951600A99CDE /* MasterViewController.h */,
 				2C13B811199A951600A99CDE /* MasterViewController.m */,
-				2C13B813199A951600A99CDE /* DetailViewController.h */,
-				2C13B814199A951600A99CDE /* DetailViewController.m */,
 				2C13B839199AAB0500A99CDE /* AddCharacterViewController.h */,
 				2C13B83A199AAB0500A99CDE /* AddCharacterViewController.m */,
 			);
@@ -318,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C13B815199A951600A99CDE /* DetailViewController.m in Sources */,
 				2C13B84F199ADE1F00A99CDE /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				2C13B84D199ADE1F00A99CDE /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2C13B84C199ADE1F00A99CDE /* TPKeyboardAvoidingCollectionView.m in Sources */,
