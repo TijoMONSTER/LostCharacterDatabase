@@ -56,20 +56,26 @@
 {
 	AddCharacterViewController *addCharacterViewController = (AddCharacterViewController *)segue.sourceViewController;
 
-	NSString *passengerToAdd = [addCharacterViewController passengerToAdd];
-	NSString *actorToAdd = [addCharacterViewController actorToAdd];
+	NSDictionary *characterToAdd = [addCharacterViewController characterToAdd];
 
-	[self insertNewCharacterWithPassenger:passengerToAdd actor:actorToAdd];
+	[self insertNewCharacterWithPassenger:characterToAdd[@"passenger"]
+									actor:characterToAdd[@"actor"]
+								hairColor:characterToAdd[@"hairColor"]
+								planeSeat:characterToAdd[@"planeSeat"]
+									  age:characterToAdd[@"age"]];
 	[self saveManagedObject];
 }
 
 #pragma mark - Helper methods
 
-- (void)insertNewCharacterWithPassenger:(NSString *)passenger actor:(NSString *)actor
+- (void)insertNewCharacterWithPassenger:(NSString *)passenger actor:(NSString *)actor hairColor:(NSString *)hairColor planeSeat:(NSNumber *)planeSeat age:(NSNumber *)age
 {
 	LostCharacter *character = [NSEntityDescription insertNewObjectForEntityForName:lostCharacterEntityName inManagedObjectContext:self.managedObjectContext];
 	character.passenger = passenger;
 	character.actor = actor;
+	character.hair_color = hairColor;
+	character.plane_seat = planeSeat;
+	character.age = age;
 }
 
 - (void)saveManagedObject
@@ -94,7 +100,11 @@
 
 	// for each dictionary on the plist, create an entity on db
 	for (NSDictionary *characterDictionary in plist) {
-		[self insertNewCharacterWithPassenger:characterDictionary[@"passenger"] actor:characterDictionary[@"actor"]];
+		[self insertNewCharacterWithPassenger:characterDictionary[@"passenger"]
+										actor:characterDictionary[@"actor"]
+									hairColor:@"I don't know"
+									planeSeat:@1
+										  age:@25];
 	}
 
 	[self saveManagedObject];

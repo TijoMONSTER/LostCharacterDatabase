@@ -31,20 +31,17 @@
 	self.navigationItem.hidesBackButton = YES;
 }
 
-- (NSString *)passengerToAdd
+- (NSDictionary *)characterToAdd
 {
-	if (self.passengerTextField.text.length > 0) {
-		return self.passengerTextField.text;
-	}
-	return nil;
-}
+	NSNumber *planeSeat = [NSNumber numberWithInt:[self.planeSeatTextField.text intValue]];
+	NSNumber *age = [NSNumber numberWithInt:[self.ageTextField.text intValue]];
 
-- (NSString *)actorToAdd
-{
-	if (self.actorTextField.text.length > 0) {
-		return self.actorTextField.text;
-	}
-	return nil;
+	NSDictionary *character = @{@"passenger": self.passengerTextField.text,
+								@"actor": self.actorTextField.text,
+								@"hairColor": self.hairColorTextField.text,
+								@"planeSeat": planeSeat,
+								@"age": age};
+	return character;
 }
 
 #pragma mark - IBActions

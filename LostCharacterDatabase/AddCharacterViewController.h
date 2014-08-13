@@ -10,7 +10,6 @@
 
 @interface AddCharacterViewController : UIViewController
 
-- (NSString *)passengerToAdd;
-- (NSString *)actorToAdd;
+- (NSDictionary *)characterToAdd;
 
 @end
